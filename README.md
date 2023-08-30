@@ -6,11 +6,9 @@ The code is developed by [Paper99](https://github.com/Paper99) and [penguin1214]
 
 The code is developed by [aura1999](https://github.com/aura1999jmpark) and [Seonyoo-Kim](https://github.com/SeonYoo-Kim) based on [SRFBN](https://github.com/Paper99/SRFBN_CVPR19), and tested on Ubuntu 20.04 environment with 3090Ti GPU.
 
-![](figs/SRFBN_arch.png)
+![](figs/SU_architecture.png)
 
-The architecture of our proposed SRFBN. Blue arrows represent feedback connections. The details about our proposed SRFBN can be found in [our main paper](https://arxiv.org/abs/1903.09814).
-
-If you find our work useful in your research or publications, please consider citing:
+If you find this work useful in your research or publications, please consider citing:
 
 ```latex
 @inproceedings{li2019srfbn,
@@ -53,7 +51,7 @@ If you find our work useful in your research or publications, please consider ci
 1. Clone this repository:
 
    ```shell
-   git clone https://github.com/Paper99/SRFBN_CVPR19.git
+   git clone https://github.com/SeonYoo-Kim/SU-SRFBN.git
    ```
 
 2. Download our pre-trained models from the links below, unzip the models and place them to `./models`.
