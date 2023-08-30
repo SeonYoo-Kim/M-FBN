@@ -60,8 +60,8 @@ If you find this work useful in your research or publications, please consider c
 3. Place your own images to `./results/LR/MyImage`.
 
    
-4. cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:  <br/>
-   If you already have `./results/SR` folder, make sure there's nothing in it.
+4. cd to `SU-SRFBN` and run **one of following commands**:  <br/>
+   If you already have `./results/SR` folder, **make sure there's nothing in it.**
 
    ```shell
    # SU-SRFBN-L x16 (x2 four times)
@@ -77,7 +77,7 @@ If you find this work useful in your research or publications, please consider c
    sh test_SUFBN_S_x4x4.sh
    ```
 
-5. Finally, PSNR/SSIM values for your images are shown on your screen, you can find the reconstruction images in `./results`.
+5. You can find the reconstruction images in `./results`.
 
 
 
@@ -92,7 +92,8 @@ If you find this work useful in your research or publications, please consider c
 3. Run `./results/Prepare_TestData_HR_LR.m` in Matlab to generate HR/LR test images with corresponding degradation model and scale factor, and choose one of SR benchmark for evaluation during training. <br/>
    You have to generate various scales of LR images also.
 
-4. Use `./options/train/train_SUFBN_(model size)_x(scale)_(step).json` as you want. The model size has to be S or L, the scale is 2 or 4, the step has to be 1 to 4 as scale 2, and 1 to 2 as scale 4 to train x16 upscaling. <br/>
+4. Use `./options/train/train_SUFBN_(model size)_x(scale)_(step).json` as you want.  <br/>
+   The model size has to be S or L, the scale is 2 or 4, the step has to be 1 to 4 as scale 2, and 1 to 2 as scale 4 to train x16 upscaling. <br/>
    Or you can edit `./options/train/train_SUFBN_example.json` for your needs according to [`./options/train/README.md`.](./options/train/README.md)
 
 5. Then, run command:
@@ -104,9 +105,9 @@ If you find this work useful in your research or publications, please consider c
    ```
    The name of json files can fallow the files you made.
 
-6. You can monitor the training process in `./experiments`.
+7. You can monitor the training process in `./experiments`.
 
-7. Finally, you can follow the **test pipeline** to evaluate your model.
+8. Finally, you can follow the **test pipeline** to evaluate your model.
 
 ## Results
 
