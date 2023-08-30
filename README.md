@@ -106,31 +106,8 @@ If you find this work useful in your research or publications, please consider c
 
 #### Quantitative Results
 
-![](figs/comp_soa_bi.png)
+![](figs/benchmark.png)
 
-Average PSNR/SSIM for scale factors x2, x3 and x4 with BI degradation model. The best performance is shown in red and the second best performance is shown in blue.
-
-![](figs/comp_soa_bd_dn.png)
-
-Average PSNR/SSIM values for scale factor x3 with BD and DN degradation models. The best performance is shown in red and the second best performance is shown in blue.
-
-#### More Qualitative Results
-
-![](figs/img_004_BI.jpg)
-
-Qualitative results with BI degradation model (x4) on “img 004” from Urban100.
-
-![](figs/manga109_BD.jpg)
-
-Qualitative results with BD degradation model (x3) on “MisutenaideDaisy” from Manga109.
-
-![](figs/head_DN.jpg)
-
-Qualitative results with DN degradation model (x3) on “head” from Set14.
-
-## TODO
-
-- Curriculum learning for complex degradation models (i.e. BD and DN degradation models).
 
 ## Acknowledgements
 
