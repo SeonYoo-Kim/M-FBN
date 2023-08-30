@@ -5,7 +5,6 @@ __pycache__/
 *.suo
 *.pyproj
 *.pyc
-*.sh
 *.pth
 
 experiments/
