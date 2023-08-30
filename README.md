@@ -60,7 +60,7 @@ If you find this work useful in your research or publications, please consider c
 
 
 3. Then, cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:
-   Make sure that nothing's in the `results/SR` folder.
+   If you already have `results/SR` folder, make sure that nothing's in it.
 
    ```shell
    # SU-SRFBN-L x16 (x2 four times)
