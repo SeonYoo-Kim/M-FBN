@@ -1,10 +1,10 @@
 # Sequential Upscaling using Feedback Network
 
-##### *"With two time steps and each contains 7 RDBs, the proposed GMFN achieves better reconstruction performance compared to state-of-the-art image SR methods including RDN which contains 16 RDBs."*
-
-This repository is Pytorch code for our proposed SRFBN.
+This repository is Pytorch code for our proposed SU-SRFBN.
 
 The code is developed by [Paper99](https://github.com/Paper99) and [penguin1214](https://github.com/penguin1214) based on [BasicSR](https://github.com/xinntao/BasicSR), and tested on Ubuntu 16.04/18.04 environment (Python 3.6/3/7, PyTorch 0.4.0/1.0.0/1.0.1, CUDA 8.0/9.0/10.0) with 2080Ti/1080Ti GPUs.
+
+The code is developed by [aura1999](https://github.com/aura1999jmpark) and [Seonyoo-Kim](https://github.com/SeonYoo-Kim) based on [SRFBN](https://github.com/Paper99/SRFBN_CVPR19), and tested on Ubuntu 20.04 environment with 3090Ti GPU.
 
 ![](figs/SRFBN_arch.png)
 
