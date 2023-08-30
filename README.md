@@ -59,39 +59,24 @@ If you find this work useful in your research or publications, please consider c
    [[GoogleDrive]](https://drive.google.com/drive/folders/1dJyMGNaUPzHWU1YVNlTC1YMpViMFsf5c?usp=sharing)
 
 
-3. Then, cd to `SRFBN_CVPR19` and run **one of following commands** for evaluation on *Set5*:
+3. Then, cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:
 
    ```shell
-   # SRFBN
-   python test.py -opt options/test/test_SRFBN_x2_BI.json
-   python test.py -opt options/test/test_SRFBN_x3_BI.json
-   python test.py -opt options/test/test_SRFBN_x4_BI.json
-   python test.py -opt options/test/test_SRFBN_x3_BD.json
-   python test.py -opt options/test/test_SRFBN_x3_DN.json
+   # SU-SRFBN-L x16 (x2 four times)
+   sh test_SUFBN_L_x2x2x2x2.sh
+
+   # SU-SRFBN-L x16 (x4 two times)
+   sh test_SUFBN_L_x4x4.sh
    
-   # SRFBN-S
-   python test.py -opt options/test/test_SRFBN-S_x2_BI.json
-   python test.py -opt options/test/test_SRFBN-S_x3_BI.json
-   python test.py -opt options/test/test_SRFBN-S_x4_BI.json
+   # SU-SRFBN-S x16 (x2 four times)
+   sh test_SUFBN_S_x2x2x2x2.sh
+
+   # SU-SRFBN-S x16 (x4 two times)
+   sh test_SUFBN_S_x4x4.sh
    ```
 
-4. Finally, PSNR/SSIM values for *Set5* are shown on your screen, you can find the reconstruction images in `./results`.
+4. Finally, PSNR/SSIM values for *Set5* are shown on your screen, you can find the all steps' reconstruction images in `./results`.
 
-#### Test on standard SR benchmark
-
-1. If you have cloned this repository and downloaded our pre-trained models, you can first download SR benchmark (Set5, Set14, B100, Urban100 and Manga109) from [GoogleDrive](https://drive.google.com/file/d/1fC0AeoCLK8Oo3utnVa3E_r_45sJla4d1/view) or [BaiduYun](https://pan.baidu.com/s/1pTw5EE-N-GclI7Yj5SnnOA)(code:z6nz).
-
-2. Run `./results/Prepare_TestData_HR_LR.m` in Matlab to generate HR/LR images with different degradation models.
-
-3. Edit `./options/test/test_SRFBN_example.json` for your needs according to [`./options/test/README.md`.](./options/test/README.md)
-
-4. Then, run command:
-   ```shell
-   cd SRFBN_CVPR19
-   python test.py -opt options/test/test_SRFBN_example.json
-   ```
-
-5. Finally, PSNR/SSIM values are shown on your screen, you can find the reconstruction images in `./results`. You can further evaluate SR results using `./results/Evaluate_PSNR_SSIM.m`.
 
 #### Test on your own images
 
