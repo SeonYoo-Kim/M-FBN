@@ -60,6 +60,7 @@ If you find this work useful in your research or publications, please consider c
 
 
 3. Then, cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:
+   Make sure that nothing's in the `results/SR` folder.
 
    ```shell
    # SU-SRFBN-L x16 (x2 four times)
@@ -75,7 +76,7 @@ If you find this work useful in your research or publications, please consider c
    sh test_SUFBN_S_x4x4.sh
    ```
 
-4. Finally, PSNR/SSIM values for *Set5* are shown on your screen, you can find the all steps' reconstruction images in `./results`.
+5. Finally, PSNR/SSIM values for *Set5* are shown on your screen, you can find the all steps' reconstruction images in `./results`.
 
 
 #### Test on your own images
