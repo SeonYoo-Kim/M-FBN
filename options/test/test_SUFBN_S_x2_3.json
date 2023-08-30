@@ -3,7 +3,7 @@
     "use_cl": true,
     "gpu_ids": [0],
 
-    "scale": 4,
+    "scale": 2,
     "degradation": "BI",
     "is_train": false,
     "use_chop": true,
@@ -13,21 +13,21 @@
     "datasets": {
         "test_set": {
              "mode": "LR",
-             "dataroot_LR": "./results/LR/MyImage",
+             "dataroot_LR": "./results/SR/MyImage",
              "data_type": "img"
          }
     },
 
     "networks": {
         "which_model": "SRFBN",
-        "num_features": 64,
+        "num_features": 32,
         "in_channels": 3,
         "out_channels": 3,
         "num_steps": 4,
-        "num_groups": 6
+        "num_groups": 3
     },
 
     "solver": {
-        "pretrained_path": "./models/MFBN_x4_1.pth"
+        "pretrained_path": "./models/SUFBN_S_x2_3.pth"
     }
 }

@@ -1,6 +1,6 @@
 # Description of Test Options
 
-Let us take [`test_SRFBN_example.json`](./test_SRFBN_example.json) as an example. 
+Let us take [`test_SRFBN_example.json`](SRFBN/test_SRFBN_example.json) as an example. 
 
 **Note**: Before you run `python test.py -opt options/test/*.json`, please carefully check options: `"scale"`, `"degradation"`,  `"self_ensemble"`, `"dataroot_HR"`, `"dataroot_LR"`, `"networks"` and `"pretrained_path"`.
 
