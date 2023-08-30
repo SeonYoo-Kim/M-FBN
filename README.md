@@ -4,7 +4,7 @@ This repository is Pytorch code for our proposed SU-SRFBN.
 
 The code is developed by [aura1999](https://github.com/aura1999jmpark) and [Seonyoo-Kim](https://github.com/SeonYoo-Kim) based on [SRFBN](https://github.com/Paper99/SRFBN_CVPR19), and tested on Ubuntu 20.04 environment with 3090Ti GPU.
 
-![](figs/SU_architecture.png)
+![](figs/architecture.png)
 
 If you find this work useful in your research or publications, please consider citing:
 
