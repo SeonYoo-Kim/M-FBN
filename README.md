@@ -59,7 +59,7 @@ If you find this work useful in your research or publications, please consider c
    [[GoogleDrive]](https://drive.google.com/drive/folders/1dJyMGNaUPzHWU1YVNlTC1YMpViMFsf5c?usp=sharing)
 
 
-3. Then, cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:
+3. Then, cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:  
    If you already have `results/SR` folder, make sure that nothing's in it.
 
    ```shell
