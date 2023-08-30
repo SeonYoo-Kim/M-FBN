@@ -46,7 +46,7 @@ If you find this work useful in your research or publications, please consider c
 
 ## Test
 
-#### Quick start
+#### Test on your own images
 
 1. Clone this repository:
 
@@ -54,13 +54,17 @@ If you find this work useful in your research or publications, please consider c
    git clone https://github.com/SeonYoo-Kim/SU-SRFBN.git
    ```
 
+
 2. Download our pre-trained models from the links below, and place them to `./models`.
 
    [[GoogleDrive]](https://drive.google.com/drive/folders/1dJyMGNaUPzHWU1YVNlTC1YMpViMFsf5c?usp=sharing)
 
 
-3. Then, cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:  
-   If you already have `results/SR` folder, make sure that nothing's in it.
+3. Place your own images to `./results/LR/MyImage`.
+
+   
+4. cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:  <br/>
+   If you already have `./results/SR` folder, make sure there's nothing in it.
 
    ```shell
    # SU-SRFBN-L x16 (x2 four times)
@@ -76,22 +80,9 @@ If you find this work useful in your research or publications, please consider c
    sh test_SUFBN_S_x4x4.sh
    ```
 
-5. Finally, PSNR/SSIM values for *Set5* are shown on your screen, you can find the all steps' reconstruction images in `./results`.
+5. Finally, PSNR/SSIM values for your images are shown on your screen, you can find the reconstruction images in `./results`.
 
 
-#### Test on your own images
-
-1. If you have cloned this repository and downloaded our pre-trained models, you can first place your own images to `./results/LR/MyImage`.
-
-2. Edit `./options/test/test_SRFBN_example.json` for your needs according to [`./options/test/README.md`.](./options/test/README.md)
-
-3. Then, run command:
-   ```shell
-   cd SRFBN_CVPR19
-   python test.py -opt options/test/test_SRFBN_example.json
-   ```
-
-4. Finally, you can find the reconstruction images in `./results`.
 
 ## Train
 
@@ -105,7 +96,7 @@ If you find this work useful in your research or publications, please consider c
 
 5. Then, run command:
    ```shell
-   cd SRFBN_CVPR19
+   cd SU-SRFBN
    python train.py -opt options/train/train_M-FBN-S_x4_2.json
    ```
 
