@@ -61,7 +61,7 @@ If you find this work useful in your research or publications, please consider c
 3. Place your own images to `./results/LR/MyImage`.
 
    
-4. cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:  <br/>
+4. cd to `SU-SRFBN` and run **one of following commands** :  <br/>
    If you already have `./results/SR` folder, make sure there's nothing in it.
 
    ```shell
