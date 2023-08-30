@@ -1,6 +1,4 @@
-# Feedback Network for Image Super-Resolution [[arXiv]](https://arxiv.org/abs/1903.09814) [[CVF]](http://openaccess.thecvf.com/content_CVPR_2019/html/Li_Feedback_Network_for_Image_Super-Resolution_CVPR_2019_paper.html) [[Poster]](https://drive.google.com/open?id=1TcDk1RvUCIjr6KvQplaen8yq15LOBJwb)
-
-#### Update: Our proposed Gated Multiple Feedback Network (GMFN) will appear in BMVC2019. [[Project Website]](https://github.com/liqilei/GMFN) 
+# Sequential Upscaling using Feedback Network
 
 ##### *"With two time steps and each contains 7 RDBs, the proposed GMFN achieves better reconstruction performance compared to state-of-the-art image SR methods including RDN which contains 16 RDBs."*
 
