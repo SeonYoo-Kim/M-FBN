@@ -4,7 +4,7 @@ This repository is Pytorch code for our proposed SU-SRFBN.
 
 The code is developed by [aura1999](https://github.com/aura1999jmpark) and [Seonyoo-Kim](https://github.com/SeonYoo-Kim) based on [SRFBN](https://github.com/Paper99/SRFBN_CVPR19), and tested on Ubuntu 20.04 environment with 3090Ti GPU.
 
-![](figs/architecture.png)
+![](figs/SU_architecture.png)
 
 If you find this work useful in your research or publications, please consider citing:
 
@@ -29,7 +29,6 @@ If you find this work useful in your research or publications, please consider c
 2. [Test](#test)
 3. [Train](#train)
 4. [Results](#results)
-5. [Acknowledgements](#acknowledgements)
 
 ## Requirements
 - Python 3 (Anaconda is recommended)
@@ -61,8 +60,8 @@ If you find this work useful in your research or publications, please consider c
 3. Place your own images to `./results/LR/MyImage`.
 
    
-4. cd to `SU-SRFBN` and run **one of following commands** :  <br/>
-   If you already have `./results/SR` folder, **make sure there's nothing in it**.
+4. cd to `SU-SRFBN` and run **one of following commands** for evaluation on *Set5*:  <br/>
+   If you already have `./results/SR` folder, make sure there's nothing in it.
 
    ```shell
    # SU-SRFBN-L x16 (x2 four times)
@@ -86,17 +85,24 @@ If you find this work useful in your research or publications, please consider c
 
 1. Download training set DIV2K [[Official Link]](https://data.vision.ee.ethz.ch/cvl/DIV2K/) or DF2K [[GoogleDrive]](https://drive.google.com/drive/folders/1B-uaxvV9qeuQ-t7MFiN1oEdA6dKnj2vW?usp=sharing) [[BaiduYun]](https://pan.baidu.com/s/1CFIML6KfQVYGZSNFrhMXmA#list/path=%2F) (provided by [BasicSR](https://github.com/xinntao/BasicSR)).
 
-2. Run `./scripts/Prepare_TrainData_HR_LR.m` in Matlab to generate HR/LR training pairs with corresponding degradation model and scale factor. (**Note**: Please place generated training data to **SSD (Solid-State Drive)** for fast training)
+2. Run `./scripts/Prepare_TrainData_HR_LR.m` in Matlab to generate HR/LR training pairs with corresponding degradation model and scale factor.  <br/>
+   For example, you have to make x16 and x4 LR images to train two-stepped x16 upscaling, and x16, x8, x4, x2 images to four-stepped upscaling. <br/>
+   (**Note**: Please place generated training data to **SSD (Solid-State Drive)** for fast training)
 
-3. Run `./results/Prepare_TestData_HR_LR.m` in Matlab to generate HR/LR test images with corresponding degradation model and scale factor, and choose one of SR benchmark for evaluation during training.
+3. Run `./results/Prepare_TestData_HR_LR.m` in Matlab to generate HR/LR test images with corresponding degradation model and scale factor, and choose one of SR benchmark for evaluation during training. <br/>
+   You have to generate various scales of LR images also.
 
-4. Edit `./options/train/train_SRFBN_example.json` for your needs according to [`./options/train/README.md`.](./options/train/README.md)
+4. Use `./options/train/train_SUFBN_(model size)_x(scale)_(step).json` as you want. The model size has to be S or L, the scale is 2 or 4, the step has to be 1 to 4 as scale 2, and 1 to 2 as scale 4 to train x16 upscaling. <br/>
+   Or you can edit `./options/train/train_SUFBN_example.json` for your needs according to [`./options/train/README.md`.](./options/train/README.md)
 
 5. Then, run command:
    ```shell
+   # training large model for two-stepped upscaling
    cd SU-SRFBN
-   python train.py -opt options/train/train_M-FBN-S_x4_2.json
+   python train.py -opt options/train/train_SUFBN_L_x4_1.json
+   python train.py -opt options/train/train_SUFBN_L_x4_2.json
    ```
+   The name of json files can fallow the files you made.
 
 6. You can monitor the training process in `./experiments`.
 
@@ -106,11 +112,4 @@ If you find this work useful in your research or publications, please consider c
 
 #### Quantitative Results
 
-![](figs/benchmark.png)
-
-
-## Acknowledgements
-
-- Thank [penguin1214](https://github.com/penguin1214), who accompanies me to develop this repository.
-- Thank [Xintao](https://github.com/xinntao). Our code structure is derived from his repository [BasicSR](https://github.com/xinntao/BasicSR). 
-- Thank authors of [BasicSR](https://github.com/xinntao/BasicSR)/[RDN](https://github.com/yulunzhang/RDN)/[EDSR](https://github.com/thstkdgus35/EDSR-PyTorch). They provide many useful codes which facilitate our work.
+![](figs/standard_benchmark.png)
