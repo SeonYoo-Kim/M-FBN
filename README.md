@@ -54,12 +54,10 @@ If you find this work useful in your research or publications, please consider c
    git clone https://github.com/SeonYoo-Kim/SU-SRFBN.git
    ```
 
-2. Download our pre-trained models from the links below, unzip the models and place them to `./models`.
+2. Download our pre-trained models from the links below, and place them to `./models`.
 
-   |  Model  | Param. |                      Links                                   | 
-   | :-----: | :----: | :----------------------------------------------------------: |
-   |  SRFBN  | 3,631K | [[GoogleDrive]](https://drive.google.com/file/d/1Dsb_-OH0CeSJVjvP9A4bh2_IBQh9R-ja/view) [[BaiduYun]](https://pan.baidu.com/s/1fIGBulcWll8MzaS87D_kPQ)(code:6qta) |
-   | SRFBN-S |  483K  | [[GoogleDrive]](https://drive.google.com/file/d/1NYIS0zPrpSO5fv1xpN1hH6qX4lBYxIW5/view?usp=sharing) [[BaiduYun]](https://pan.baidu.com/s/1Du4fk0bmjTcJ4KmWJBqSYA)(code:r4cp) |
+   [[GoogleDrive]](https://drive.google.com/drive/folders/1dJyMGNaUPzHWU1YVNlTC1YMpViMFsf5c?usp=sharing)
+
 
 3. Then, cd to `SRFBN_CVPR19` and run **one of following commands** for evaluation on *Set5*:
 
